@@ -4,7 +4,7 @@
 @use 'globals/mixins.scss' as *;
 
 body{
-    background: url(../assets/images/background-image.png) center / cover no-repeat;
+    background: url(../assets/images/background-image.jpg) center / cover no-repeat;
 
     header{
         .navbar-container{
@@ -16,7 +16,6 @@ body{
             .logo{
                 a{
                     @include navbar-typo;
-                    // font-weight: 600;
                 }
             }
 
