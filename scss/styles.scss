@@ -1,0 +1,193 @@
+@use 'globals/reset';
+@use 'globals/typography';
+@use 'globals/variables' as *;
+@use 'globals/mixins.scss' as *;
+
+body{
+    background: url(../assets/images/background-image.png) center / cover no-repeat;
+
+    header{
+        .navbar-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 6rem;
+
+            .logo{
+                a{
+                    @include navbar-typo;
+                    // font-weight: 600;
+                }
+            }
+
+            .nav-links{
+                .links{
+                    @include navbar-typo;
+                    text-transform: capitalize;
+                    margin-left: 1.5rem;
+
+                    &:hover{
+                        opacity: .5;
+                    }
+                }
+
+                .links0{
+                    margin-left: 0;
+                }
+            }
+
+            .nav-btn{
+                .btn{
+                    @include navbar-typo;
+                    font-weight: 500;
+                    color: #140000;
+                    text-transform: capitalize;
+                    border: .125rem solid #828282;
+                    padding: .3rem 1.75rem;
+                    border-radius: 2rem;
+
+                    &:hover{
+                        border: .125rem solid black;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        .header{
+            width: 66.125rem;
+            margin: 5rem auto 4rem auto;
+
+            h1{
+                color: #00203F;
+                font-weight: 700;
+                font-size: 3.438rem;
+                line-height: 5.156rem;
+                text-align: center;
+            }
+        }
+
+        .main-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 5rem;
+
+            .container{
+                display: grid;
+                grid-template-columns: repeat(2, 323px);
+                grid-template-rows: repeat(2, 400px);
+                gap: 30px;
+    
+                .box{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    border-radius: 1rem;
+                    padding: 1.5rem;
+
+                    img{
+                        width: 12.063rem;
+                        height: 12.063rem;
+                        object-fit: cover;
+                        margin-top: 1rem;
+                    }
+
+                    h2{
+                        font-size: 1.75rem;
+                        font-weight: 700;
+                        line-height: 2.118rem;
+                        margin-bottom: .7rem;
+                    }
+
+                    .header-box-0{
+                        color: #00588A;
+                    }
+
+                    .header-box-1{
+                        color: #1f18015e;
+                    }
+
+                    .header-box-2{
+                        color: #1f18015e;
+                    }
+
+                    .header-box-3{
+                        color: #1f18015e;
+                    }
+
+                    p{
+                        font-weight: 500;
+                        line-height: 1.219rem;
+                        color: #742D06;
+                        margin-bottom: .7rem;
+                    }
+
+                    .para-0{
+                        color: #233E60;
+                    }
+
+                    .btn-container{
+                        font-size: .813rem;
+                        font-weight: 700;
+                        line-height: .983rem;
+                        padding: .6rem 1.4rem;
+                        background: #00588A;
+                        box-shadow: 3px 8px 16.8px 0px #233E6054;
+                        border-radius: 2.563rem;
+                        margin-top: .5rem;
+                        margin-bottom: 2rem;
+                        color: #fff;
+                        
+                        &:hover{
+                            opacity: .5;
+                        }
+                    }
+
+                    .btn-0{
+                        background: #665E40;
+                    }
+
+                    .btn-1{
+                        background: #664D36;
+                    }
+
+                    .btn-2{
+                        background: #4A6640;
+                    }
+                }
+
+                .box-0{
+                    background: #00E0FF3D;
+                }
+
+                .box-1{
+                    background: #FFC7005E;
+                }
+
+                .box-2{
+                    background: #FF7A0078;
+                }
+
+                .box-3{
+                    background: #42FF005E;
+                }
+            }
+        }
+    }
+
+    footer{
+        text-align: center;
+        margin-bottom: 1rem;
+
+        a{
+            background: #233E6054;
+            padding: .2rem .5rem;
+            border-radius: .5rem;
+            color: #742D06;
+        }
+    }
+}
